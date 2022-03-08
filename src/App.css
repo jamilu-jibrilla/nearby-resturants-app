@@ -4,7 +4,7 @@
 }
 body {
   text-align: center;
-  background-image: url(https://developer.tomtom.com/sites/all/themes/tomtom/images/transparent-roads.svg);
+  /* background-image: url(https://developer.tomtom.com/sites/all/themes/tomtom/images/transparent-roads.svg); */
   background-size: cover;
   font-size: 1.3em;
   font-weight: bold;
