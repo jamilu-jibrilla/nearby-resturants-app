@@ -29,10 +29,10 @@ const Map = () => {
             key: "qQMtZMYW4RAyf2frPAyIW1Az1jjBRAYC",
             container: mapElement.current,
             center: [mapLongtitude, mapLatitude],
-            style: { map:"hybrid_main"},
+            style: { map:"basic_main"},
             color:"#0A5B6J",
             zoom: 15,
-            title: "Hybrid map"
+            title: "Basic map"
         })
         setMap(map);
         setMapLoaded(true)
@@ -47,10 +47,7 @@ const Map = () => {
 
     
     return (
-      <div>
-        {/* <button style={{position: "absolute", bottom: "0em", left: "50%"}} onClick={addMarker}>click</button> */}
-        <div style={{height: "100vh", width: "100vw"}} ref={mapElement} className="Map">
-        </div>  
+      <div style={{height: "100vh", width: "100vw"}} ref={mapElement} className="Map">
       </div>
     )
 }
