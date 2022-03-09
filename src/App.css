@@ -3,15 +3,11 @@
   padding: 0;
 }
 body {
-  text-align: center;
   /* background-image: url(https://developer.tomtom.com/sites/all/themes/tomtom/images/transparent-roads.svg); */
   background-size: cover;
   font-size: 1.3em;
   font-weight: bold;
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   overflow: hidden;
 }

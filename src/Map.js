@@ -18,9 +18,9 @@ const Map = () => {
     // }
     var markerElement = document.createElement("div")
     markerElement.className = "marker"
-    markerElement.style.backgroundColor = "#ABABAB"
-    markerElement.style.width = '10px'
-    markerElement.style.height = '10px'
+    markerElement.style.backgroundColor = "red"
+    markerElement.style.width = '20px'
+    markerElement.style.height = '20px'
      var marker = new tt.Marker({element: markerElement, anchor: 'center',}).setLngLat([mapLongtitude, mapLatitude]).addTo(map)
     return marker
   }
@@ -31,7 +31,7 @@ const Map = () => {
             center: [mapLongtitude, mapLatitude],
             style: { map:"basic_main"},
             color:"#0A5B6J",
-            zoom: 15,
+            zoom: 9,
             title: "Basic map"
         })
         setMap(map);
