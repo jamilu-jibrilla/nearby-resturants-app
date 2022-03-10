@@ -2,11 +2,11 @@
 input[type="search"] {
     width: 500px;
     height: 40px;
-    margin: 1.2em;
-    border: 1px solid rgba(0,0,0,0.3);
+    margin: 1.1em;
+    border: 1px solid rgba(0,0,0,0.28);
     box-shadow: -4px 6px 35px -14px rgba(0,0,0,0.1);
     background-color: transparent;
-    font-size: 18px;
+    font-size: 15px;
     font-family: sans-serif;
     appearance: none;
 }
@@ -15,6 +15,6 @@ input[type="search"]:focus {
 }
 
 span {
-    margin: 0em 5em 0em 1em;
+    margin: 0em 4em 0em .8em;
     text-transform: uppercase;
 }
