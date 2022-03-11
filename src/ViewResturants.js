@@ -53,7 +53,14 @@ const ViewResturants = ()=> {
                 <button onClick={updateData}>search</button>
             </div>
             <div className="main">
-                ...loading
+                <div className="card">
+                    <img width={"200px"} height={"150px"} src={""} />
+                    <div className="card-body">
+                        Name:  <br/>
+                        Address: <br/>
+                        Distance: <br />
+                    </div>
+                </div>
             </div>
         </div>
     )

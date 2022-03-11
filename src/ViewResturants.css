@@ -5,6 +5,15 @@
 }
 .main {
     width: 70%;
+    color: black;
+}
+.card {
+    display: flex;
+}
+.card-body {
+    margin-left: .7em;
+    font-weight: bold;
+    font-size: 1em;
 }
 .side-nav {
     background-color: #6C63FF;
