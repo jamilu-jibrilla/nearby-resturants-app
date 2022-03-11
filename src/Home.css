@@ -1,0 +1,42 @@
+.Home {
+    min-height: 100%;
+}
+.header {
+    padding: .6em;
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bg {
+    /* background-image: url(https://developer.tomtom.com/sites/all/themes/tomtom/images/transparent-roads.svg); */
+    background-image: url(./undraw_adventure_map.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 70vh;
+}
+.Home button {
+    padding: .6em 2em;
+    font-size: 1em;
+    border-radius: 20px;
+    background-color: #EEEEEF;
+    border: none;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .Home button {
+        padding: .45em 1.3em;
+        font-size: .9em;
+        border-radius: 20px;
+    }   
+    .header {
+        padding: .3em;
+    }
+    .Home  h1{
+        font-size: 1.4em;
+    }
+}

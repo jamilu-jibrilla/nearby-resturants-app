@@ -6,9 +6,7 @@ import SearchBox from './SearchBox';
 function App() {
   return (
     <div className="App">
-      <header>
-       <SearchBox />
-      </header> 
+       {/* <SearchBox /> */}
       <Home />
       {/* <Map /> */}
     </div>
