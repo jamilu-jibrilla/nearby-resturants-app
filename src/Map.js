@@ -14,21 +14,33 @@ const Map = () => {
 
   const [Mapdata,setMapData] = useState({})
 
-    const addMarker = (l1,l2) => {
+    const addMarker = (l1,l2,markerText) => {
       let markerElement = document.createElement("div")
       markerElement.className = "marker"
-      markerElement.style.backgroundColor = "red"
-      // markerElement.style.backgroundImage = "url()"
-      markerElement.style.width = '12px'
-      markerElement.style.height = '12px'
+      // markerElement.style.backgroundColor = "red"
+      markerElement.style.backgroundImage = "url(./utensils-solid.svg)"
+      markerElement.style.width = '32px'
+      markerElement.style.height = '32px'
       let marker = new tt.Marker({element: markerElement}).setLngLat([l1,l2]).addTo(map)
+      let popupOffsets = {
+        top: [0, 0],
+        bottom: [0, -30],
+        left: [25, -35],
+        right: [-25, -35],
+      };
+  
+      let popup = new tt.Popup({
+        offset: popupOffsets,
+      }).setHTML(markerText);
+  
+      marker.setPopup(popup);
     }
 
 
     useEffect(()=> {
       navigator.geolocation.getCurrentPosition( (position)=> {
-          setMapLatitude(position.coords.latitude)
-          setMapLongtitude(position.coords.longitude)
+          setMapLatitude(`${position.coords.latitude}`)
+          setMapLongtitude(`${position.coords.longitude}`)
       })
       const options = {
       method: 'GET',
@@ -38,11 +50,11 @@ const Map = () => {
           radius: '50000',
           categories: '13065',
           sort: 'DISTANCE',
-          limit: '7'
+          limit: '9'
       },
       headers: {
           Accept: 'application/json',
-          Authorization: 'fsq3ougG8DhN7W7mevzyZX8RO3wAjKMpw5fAGCmJD2IoTjA='
+          Authorization: 'fsq3ZTIrxgFWdcx1KJoBHbrWXC1QzLWY3G6Ds7BywNYTEDw='
       }
       };
       
@@ -50,7 +62,7 @@ const Map = () => {
       .then(function (res) {
           let data = res.data.results
           data.map((place)=> {
-            addMarker(place.geocodes.main.longitude,place.geocodes.main.latitude)
+            addMarker(place.geocodes.main.longitude,place.geocodes.main.latitude,place.name)
               setMapData({
                 ...Mapdata,
                   placeName: place.name,

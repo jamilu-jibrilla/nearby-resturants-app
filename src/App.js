@@ -1,8 +1,7 @@
 import './App.css';
 import Map from './Map';
+import Home from './Home';
 import SearchBox from './SearchBox';
-import { useEffect, useState } from 'react';
-import { map } from '@tomtom-international/web-sdk-maps';
 
 function App() {
   return (
@@ -10,7 +9,8 @@ function App() {
       <header>
        <SearchBox />
       </header> 
-      <Map />
+      <Home />
+      {/* <Map /> */}
     </div>
   );
 }

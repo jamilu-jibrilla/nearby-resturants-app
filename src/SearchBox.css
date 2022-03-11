@@ -1,6 +1,6 @@
 
 input[type="search"] {
-    width: 500px;
+    width: 450px;
     height: 40px;
     margin: 1.1em;
     border: 1px solid rgba(0,0,0,0.28);
@@ -9,12 +9,13 @@ input[type="search"] {
     font-size: 15px;
     font-family: sans-serif;
     appearance: none;
+    border-radius: 5px;
 }
 input[type="search"]:focus {
     outline: none;
 }
 
 span {
-    margin: 0em 4em 0em .8em;
+    margin: 0em 4em 0em .7em;
     text-transform: uppercase;
 }
