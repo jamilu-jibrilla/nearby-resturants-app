@@ -52,7 +52,7 @@ const Map = ({Mapdata, setMapData}) => {
           },
           headers: {
               Accept: 'application/json',
-              Authorization: 'fsq3ZTIrxgFWdcx1KJoBHbrWXC1QzLWY3G6Ds7BywNYTEDw='
+              Authorization: 'fsq3O/V4qgl9Xwc7/J2XjC24IKwNOvbtI89PeWz/7LeD1+g='
           }
           };
         axios.request(options)
@@ -61,13 +61,6 @@ const Map = ({Mapdata, setMapData}) => {
             console.log(data)
             data.map((place)=> {
               addMarker(place.geocodes.main.longitude,place.geocodes.main.latitude,place.name)
-                setMapData({...Mapdata,
-                    placeName: place.name,
-                    Address: place.location.formatted_address,
-                    distance: place.distance,
-                    image:place.categories[0].icon.prefix,
-                    coords: [place.geocodes.main.latitude,place.geocodes.main.longitude],
-                });
             })
         }).catch(function (error) {
             console.error(error);

@@ -4,7 +4,7 @@ const SearchBox = () => {
         <div className="SearchBox">
             <span>Resturant Locator Map</span>
             <input placeholder=" search..." type="search" /> 
-            <a href={"#"}>View All</a>
+            <a href={"/ViewResturants"}>View All</a>
         </div>
     )
 }

@@ -1,16 +1,19 @@
-import { useState } from 'react';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
+
 import './App.css';
 import ViewResturants from './ViewResturants';
 import Map from './Map';
 import Home from './Home';
 function App() {
-  const [Mapdata,setMapData] = useState({})
-  console.log(Mapdata)
   return (
     <div className="App">
-      {/* <Home /> */}
-      {/* <Map Mapdata={Mapdata} setMapData={setMapData}/> */}
-      <ViewResturants />
+      <Router>
+      <Routes>
+          <Route exact path='/' element={<Home/>}/>
+          <Route path='/Map' element={<Map/>}/>
+          <Route path='/ViewResturants' element={<ViewResturants/>}/>
+      </Routes>
+    </Router>
     </div>
   );
 }

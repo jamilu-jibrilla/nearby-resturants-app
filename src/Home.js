@@ -4,7 +4,7 @@ const Home =()=> {
         <div className="Home">
             <header className="header">
                 <h1>Find Nearby Resturants Around You</h1>
-                <button>View Map</button>
+                <button> <a href="/Map">View Map </a></button>
             </header>
             <div className="bg">
             </div>

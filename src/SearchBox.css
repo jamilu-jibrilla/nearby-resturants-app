@@ -34,16 +34,27 @@ a {
     color: white;
 }
 @media screen and (max-width: 500px) {
-    span {
-        font-size: 1em;
+    .SearchBox span {
+        font-size: 1.2em;
+    }
+    .SearchBox {
+        text-align: center
+    }
+    a {
+        font-size: .8em;
+        text-decoration: underline;
+        margin-bottom: .3em;
     }
     input[type="search"] {
-        width: 80%;
+        width: 75%;
+        height: 30px;
     }
     .SearchBox {
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        margin: 0px;
     }
-    a {
-    }
+    
 }
