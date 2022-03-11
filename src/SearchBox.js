@@ -2,8 +2,9 @@ import "./SearchBox.css"
 const SearchBox = () => {
     return (
         <div className="SearchBox">
-            <span>Resturant Finder App</span>
-            <input placeholder=" search for resturants..." type="search" /> 
+            <span>Resturant Locator Map</span>
+            <input placeholder=" search..." type="search" /> 
+            <a href={"#"}>View All</a>
         </div>
     )
 }

@@ -1,0 +1,25 @@
+.ViewResturants {
+    display: flex;
+    min-height: 100vh;
+    color: white;
+}
+.main {
+    width: 70%;
+}
+.side-nav {
+    background-color: #6C63FF;
+    padding: 1em;
+}
+.side-nav button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    margin: 1.3em 0; 
+    font-size: 1.1em;
+    border-radius: 10px;
+    color: #6C63FF;
+}
+.side-nav button:hover {
+    cursor: pointer;
+    color: blue;
+}

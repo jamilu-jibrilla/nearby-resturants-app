@@ -1,14 +1,16 @@
+import { useState } from 'react';
 import './App.css';
+import ViewResturants from './ViewResturants';
 import Map from './Map';
 import Home from './Home';
-import SearchBox from './SearchBox';
-
 function App() {
+  const [Mapdata,setMapData] = useState({})
+  console.log(Mapdata)
   return (
     <div className="App">
-       {/* <SearchBox /> */}
-      <Home />
-      {/* <Map /> */}
+      {/* <Home /> */}
+      {/* <Map Mapdata={Mapdata} setMapData={setMapData}/> */}
+      <ViewResturants />
     </div>
   );
 }

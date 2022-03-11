@@ -2,8 +2,8 @@
     min-height: 100%;
 }
 .header {
-    padding: .6em;
-    background-color: blue;
+    padding: .7em;
+    background-color: #6C63FF;
     color: white;
     display: flex;
     flex-direction: column;
@@ -16,15 +16,20 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
-    height: 70vh;
+    height: 60vh;
 }
 .Home button {
     padding: .6em 2em;
     font-size: 1em;
     border-radius: 20px;
     background-color: #EEEEEF;
+    color: #6C63FF;
     border: none;
     margin-bottom: 10px;
+}
+.Home button:hover {
+    cursor: pointer;
+    color: bl;
 }
 
 @media screen and (max-width: 500px) {
