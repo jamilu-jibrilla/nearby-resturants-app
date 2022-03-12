@@ -40,6 +40,7 @@
 input[type="number"] {
   outline: none;
   height: 20px;
+  background-color: white;
 }
 
 @media screen and (max-width: 500px) {
@@ -49,13 +50,13 @@ input[type="number"] {
   }
   .side-nav {
     margin: 0px;
-    height: 20vh;
+    height: 25vh;
   }
   p {
     margin: 0.5em 0px;
   }
   .main {
-    height: 75vh;
+    height: 70vh;
   }
 
   .side-nav button {

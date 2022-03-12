@@ -77,7 +77,7 @@ const Map = ({ Mapdata, setMapData }) => {
       setMapLatitude(`${position.coords.latitude}`);
       setMapLongtitude(`${position.coords.longitude}`);
     });
-    var map = tt.map({
+    let map = tt.map({
       key: "qQMtZMYW4RAyf2frPAyIW1Az1jjBRAYC",
       container: mapElement.current,
       center: [mapLongtitude, mapLatitude],

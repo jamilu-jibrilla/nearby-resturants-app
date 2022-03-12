@@ -1,60 +1,60 @@
 input[type="search"] {
-    width: 450px;
-    height: 40px;
-    margin: 1.1em;
-    border: 1px solid rgba(0,0,0,0.28);
-    box-shadow: -4px 6px 35px -14px rgba(0,0,0,0.1);
-    background-color: transparent;
-    font-size: 15px;
-    font-family: sans-serif;
-    appearance: none;
-    background-color: white;
+  width: 450px;
+  height: 40px;
+  margin: 1.1em;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  box-shadow: -4px 6px 35px -14px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  font-size: 15px;
+  font-family: sans-serif;
+  appearance: none;
+  background-color: white;
 
-    border-radius: 5px;
+  border-radius: 5px;
 }
 input[type="search"]:focus {
-    outline: none;
+  outline: none;
 }
 .SearchBox {
-    background-color: #6C63FF;
-
+  background-color: #6c63ff;
 }
 
 span {
-    margin: 0em 4em 0em .7em;
-    text-transform: uppercase;
-    font-size: 1.4em;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.78);
-    color: white;
+  margin: 0em 4em 0em 0.7em;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.78);
+  color: white;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 @media screen and (max-width: 500px) {
-    .SearchBox span {
-        font-size: 1.2em;
-    }
-    .SearchBox {
-        text-align: center
-    }
-    a {
-        font-size: .8em;
-        text-decoration: underline;
-        margin-bottom: .3em;
-    }
-    input[type="search"] {
-        width: 75%;
-        height: 30px;
-    }
-    .SearchBox {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 0px;
-    }
-    
+  .SearchBox span {
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0.4em 0px 0px 0px;
+  }
+
+  a {
+    font-size: 0.9em;
+    margin-bottom: 1em;
+  }
+
+  input[type="search"] {
+    width: 60%;
+    height: 29px;
+    margin: 0.8em 0px;
+  }
+  .SearchBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
 }
