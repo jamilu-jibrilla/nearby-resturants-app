@@ -1,73 +1,72 @@
 .ViewResturants {
-    display: flex;
-    min-height: 100vh;
-    color: white;
-    overflow: hidden;    
+  display: flex;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
 }
 .main {
-    width: 100%;
-    color: black;
-    height: 100vh;
-    overflow-y: scroll ;
+  width: 100%;
+  color: black;
+  height: 100%;
+  overflow-y: scroll;
 }
 .card {
-    display: flex;
-    margin: 1em;
+  display: flex;
+  margin: 1em;
 }
 .card-body {
-    margin-left: .7em;
-    font-size: 1em;
+  margin-left: 0.7em;
+  font-size: 1em;
 }
 .side-nav {
-    height: 100vh;
-    background-color: #6C63FF;
-    padding: 1em;
+  height: 100vh;
+  background-color: #6c63ff;
+  padding: 1em;
 }
 .side-nav button {
-    width: 150px;
-    height: 30px;
-    border: none;
-    margin: 1.2em 0; 
-    font-size: 1.1em;
-    border-radius: 2px;
-    color: black;
+  width: 150px;
+  height: 30px;
+  border: none;
+  margin: 1.2em 0;
+  font-size: 1.1em;
+  border-radius: 2px;
+  color: black;
 }
 .side-nav button:hover {
-    cursor: pointer;
-    color: blue;
+  cursor: pointer;
+  color: blue;
 }
 
 input[type="number"] {
-    outline: none;
-    height: 20px;
+  outline: none;
+  height: 20px;
 }
 
-@media screen and (max-width:500px) {
-    .ViewResturants {
-        display: block;
-        overflow:hidden;
-    }
-    .side-nav {
-        margin: 0px;
-        height: 20vh;
-    }
-    p {
-        margin: .5em 0px;
-    }
-    .main {
-        height: 75vh;
-    }
-   
-    .side-nav button {
-        width: 150px;
-        height: 30px;
-        border-radius: 4px;
-        margin: .4em 0; 
-        font-size: 1em;
+@media screen and (max-width: 500px) {
+  .ViewResturants {
+    display: block;
+    overflow: hidden;
+  }
+  .side-nav {
+    margin: 0px;
+    height: 20vh;
+  }
+  p {
+    margin: 0.5em 0px;
+  }
+  .main {
+    height: 75vh;
+  }
 
-    }
-    .side-nav h2{ 
-        margin: 0px;
-        font-size: 1.2em;
-    }
+  .side-nav button {
+    width: 150px;
+    height: 30px;
+    border-radius: 4px;
+    margin: 0.4em 0;
+    font-size: 1em;
+  }
+  .side-nav h2 {
+    margin: 0px;
+    font-size: 1.2em;
+  }
 }
