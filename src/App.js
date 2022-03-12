@@ -11,15 +11,15 @@ import Map from "./Map";
 import Home from "./Home";
 function App() {
   return (
-    <div className="App">
-      <HashRouter basename="/nearby-resturants-app">
+    <Router>
+      <div className="App">
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/Map" element={<Map />} />
           <Route path="/ViewResturants" element={<ViewResturants />} />
         </Routes>
-      </HashRouter>
-    </div>
+      </div>
+    </Router>
   );
 }
 
