@@ -1,7 +1,7 @@
 {
   "name": "nearby-resturants",
   "version": "0.1.0",
-  "homepage": "https://jamilu-jibrilla.github.io/",
+  "homepage": "https://jamilu-jibrilla.github.io/nearby-resturants-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
