@@ -91,7 +91,7 @@ const Map = ({ Mapdata, setMapData }) => {
       setMapLoaded(true);
     }
     return () => map.remove();
-  }, [mapLatitude, mapLongtitude]);
+  }, []);
 
   return (
     <div>
