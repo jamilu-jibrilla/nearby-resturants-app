@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import "./ViewResturants.css";
 const ViewResturants = () => {
@@ -17,54 +17,43 @@ const ViewResturants = () => {
   const handleInputChange = () => {
     setInputState(inputElement.current.value);
   };
+  useEffect(() => {
+    updateData();
+  }, [lat, long]);
 
   const updateData = () => {
-    if (lat && long && inputState) {
-      console.log(inputState);
-      const options = {
-        method: "GET",
-        url: "https://api.foursquare.com/v3/places/search",
-        params: {
-          ll: `${lat},${long}`,
-          categories: "13065",
-          radius: inputState,
-          sort: "DISTANCE",
-          limit: "20",
-        },
-        headers: {
-          Accept: "application/json",
-          Authorization: "fsq3O/V4qgl9Xwc7/J2XjC24IKwNOvbtI89PeWz/7LeD1+g=",
-        },
-      };
-      axios
-        .request(options)
-        .then(function (res) {
-          let data = res;
-          console.log(data);
-          setData(data);
-        })
-        .catch(function (error) {
-          console.error(error);
-        });
-    }
+    const options = {
+      method: "GET",
+      url: "https://api.foursquare.com/v3/places/search",
+      params: {
+        ll: `${lat},${long}`,
+        categories: "13065",
+        radius: 100000,
+        sort: "DISTANCE",
+        limit: "20",
+      },
+      headers: {
+        Accept: "application/json",
+        Authorization: "fsq3O/V4qgl9Xwc7/J2XjC24IKwNOvbtI89PeWz/7LeD1+g=",
+      },
+    };
+    axios
+      .request(options)
+      .then(function (res) {
+        let data = res.data.results;
+        console.log(data);
+        setData(data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
 
   return (
     <div className="ViewResturants">
       <div className="heading side-nav">
         <h2>All resturants</h2>
-        <p>sort by: </p>
-        mile radius:{" "}
-        <input
-          placeholder="1000"
-          onChange={handleInputChange}
-          ref={inputElement}
-          step={100}
-          min={"0"}
-          max={"100,000"}
-          type={"number"}
-        />
-        <button onClick={updateData}>search</button>
+
         <a href="/Map">
           {" "}
           <p>view map</p>{" "}
@@ -92,7 +81,7 @@ const ViewResturants = () => {
               marginTop: "2em",
             }}
           >
-            "Enter radius value to narrow search...."
+            "loading...."
           </div>
         )}
       </div>
