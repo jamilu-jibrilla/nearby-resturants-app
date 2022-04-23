@@ -39,7 +39,8 @@ const ViewResturants = () => {
       axios
         .request(options)
         .then(function (res) {
-          let data = res.data.results;
+          let data = res;
+          console.log(data);
           setData(data);
         })
         .catch(function (error) {

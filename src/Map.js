@@ -33,7 +33,7 @@ const Map = ({ Mapdata, setMapData }) => {
     }).setHTML(markerText);
 
     marker.setPopup(popup);
-    marker.togglePopup();
+    // marker.togglePopup();
   };
 
   useEffect(() => {
@@ -45,8 +45,9 @@ const Map = ({ Mapdata, setMapData }) => {
         params: {
           ll: `${mapLatitude},${mapLongtitude}`,
           categories: "13065",
+          radius: 100000,
           sort: "DISTANCE",
-          limit: "30",
+          limit: "20",
         },
         headers: {
           Accept: "application/json",
@@ -56,8 +57,8 @@ const Map = ({ Mapdata, setMapData }) => {
       axios
         .request(options)
         .then(function (res) {
+          console.log(mapLatitude, mapLongtitude);
           let data = res.data.results;
-          console.log(data);
           data.map((place) => {
             addMarker(
               place.geocodes.main.longitude,
@@ -88,6 +89,7 @@ const Map = ({ Mapdata, setMapData }) => {
     });
     setMap(map);
     if (mapLatitude && mapLongtitude) {
+      console.log(mapLatitude, mapLongtitude);
       setMapLoaded(true);
     }
     return () => map.remove();
