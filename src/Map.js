@@ -16,8 +16,8 @@ const Map = ({ Mapdata, setMapData }) => {
     markerElement.className = "marker";
     markerElement.style.backgroundImage = `url("https://ascendfood.com/assets/images/marker.png")`;
     markerElement.style.backgroundSize = "cover";
-    markerElement.style.width = "32px";
-    markerElement.style.height = "32px";
+    markerElement.style.width = "28px";
+    markerElement.style.height = "28px";
     let marker = new tt.Marker({ element: markerElement })
       .setLngLat([l1, l2])
       .addTo(map);
@@ -33,7 +33,7 @@ const Map = ({ Mapdata, setMapData }) => {
     }).setHTML(markerText);
 
     marker.setPopup(popup);
-    // marker.togglePopup();
+    marker.togglePopup();
   };
 
   useEffect(() => {
@@ -93,7 +93,7 @@ const Map = ({ Mapdata, setMapData }) => {
       setMapLoaded(true);
     }
     return () => map.remove();
-  }, [mapLongtitude,mapLatitude]);
+  }, [mapLongtitude, mapLatitude]);
 
   return (
     <div>
