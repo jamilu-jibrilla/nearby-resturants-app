@@ -51,11 +51,11 @@ const ViewResturants = () => {
 
   return (
     <div className="ViewResturants">
-      <div className="heading side-nav">
-        <h2 className="text-2xl my-2">All resturants</h2>
+      <div className="heading side-nav py-2">
+        <h2 className="text-2xl my-1">All resturants</h2>
 
         <a href="/Map">
-          <button className="rounded py-1 px-3 md:py-1 my-5 text-black  flex items-center  md:px-5 bg-white ">
+          <button className="rounded py-1 px-4 md:py-1 my-5 text-black  flex items-center  md:px-5 bg-white ">
             view map
           </button>{" "}
         </a>
