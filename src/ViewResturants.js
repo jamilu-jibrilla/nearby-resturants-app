@@ -52,11 +52,12 @@ const ViewResturants = () => {
   return (
     <div className="ViewResturants">
       <div className="heading side-nav">
-        <h2>All resturants</h2>
+        <h2 className="text-2xl">All resturants</h2>
 
         <a href="/Map">
-          {" "}
-          <p>view map</p>{" "}
+          <button className="rounded py-1 px-3 md:py-1 my-5 text-black  flex items-center  md:px-5 bg-white ">
+            view map
+          </button>{" "}
         </a>
       </div>
       <div className="main">
@@ -79,9 +80,10 @@ const ViewResturants = () => {
               fontSize: "20px",
               fontWeight: "bold",
               marginTop: "2em",
+              color: "#3f3d56",
             }}
           >
-            "loading...."
+            Loading....
           </div>
         )}
       </div>

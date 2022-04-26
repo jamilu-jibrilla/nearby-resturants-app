@@ -20,36 +20,25 @@
 }
 .side-nav {
   height: 100vh;
-  background-color: #6c63ff;
+  background-color: #3f3d56;
   padding: 1em;
-}
-.side-nav button {
-  width: 150px;
-  height: 30px;
-  border: none;
-  margin: 1.2em 0;
-  font-size: 1.1em;
-  border-radius: 2px;
-  color: black;
-}
-.side-nav button:hover {
-  cursor: pointer;
-  color: blue;
-}
-
-input[type="number"] {
-  outline: none;
-  height: 20px;
-  background-color: white;
+  width: 23%;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 500px) {
   .ViewResturants {
     display: block;
+
     overflow: hidden;
   }
   .side-nav {
-    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 15vh;
   }
   p {
@@ -57,17 +46,5 @@ input[type="number"] {
   }
   .main {
     height: 70vh;
-  }
-
-  .side-nav button {
-    width: 150px;
-    height: 30px;
-    border-radius: 4px;
-    margin: 0.4em 0;
-    font-size: 1em;
-  }
-  .side-nav h2 {
-    margin: 0px;
-    font-size: 1.2em;
   }
 }
