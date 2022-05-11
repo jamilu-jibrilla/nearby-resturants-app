@@ -46,7 +46,7 @@ const Map = ({ Mapdata, setMapData }) => {
           ll: `${mapLatitude},${mapLongtitude}`,
           categories: "13065",
           radius: 100000,
-          sort: "DISTANCE",
+          sort: "POPULARITY",
           limit: "20",
         },
         headers: {

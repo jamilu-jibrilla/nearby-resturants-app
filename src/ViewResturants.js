@@ -1,53 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import "./ViewResturants.css";
-const ViewResturants = () => {
-  const [data, setData] = useState();
-  const [lat, setLat] = useState();
-  const [long, setLong] = useState();
-  const [inputState, setInputState] = useState();
-
-  const inputElement = useRef();
-
-  navigator.geolocation.getCurrentPosition((position) => {
-    setLat(`${position.coords.latitude}`);
-    setLong(`${position.coords.longitude}`);
-  });
-
-  const handleInputChange = () => {
-    setInputState(inputElement.current.value);
-  };
-  useEffect(() => {
-    updateData();
-  }, [lat, long]);
-
-  const updateData = () => {
-    const options = {
-      method: "GET",
-      url: "https://api.foursquare.com/v3/places/search",
-      params: {
-        ll: `${lat},${long}`,
-        categories: "13065",
-        radius: 100000,
-        sort: "DISTANCE",
-        limit: "20",
-      },
-      headers: {
-        Accept: "application/json",
-        Authorization: "fsq3O/V4qgl9Xwc7/J2XjC24IKwNOvbtI89PeWz/7LeD1+g=",
-      },
-    };
-    axios
-      .request(options)
-      .then(function (res) {
-        let data = res.data.results;
-        console.log(data);
-        setData(data);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  };
+const ViewResturants = ({appData}) => {
+  console.log(appData)
 
   return (
     <div className="ViewResturants">
@@ -61,10 +16,11 @@ const ViewResturants = () => {
         </a>
       </div>
       <div className="main">
-        {data ? (
-          data.map((place) => (
+        {appData.data ? (
+          appData.data.map((place, index) => (
             <div className="card">
-              <img width={"200px"} height={"150px"} src={""} />
+              {console.log(appData.pictures[index].length === 0 ? "empty" : appData.pictures[index][0].suffix)}
+              <img width={"200px"} height={"150px"} src={appData.pictures[index].length === 0 ? "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/5/r/z/p53930-15529157675c8f9d37cfcb7.jpg?tr=tr:n-xlarge" : appData.pictures[index][0].prefix+"700x500"+appData.pictures[index][0].suffix}/>
               <div className="card-body">
                 <b>Name:</b> {place.name} <br />
                 <b> Address:</b> {place.location.formatted_address}

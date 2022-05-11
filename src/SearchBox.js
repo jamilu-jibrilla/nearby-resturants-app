@@ -2,7 +2,7 @@ import "./SearchBox.css"
 const SearchBox = () => {
     return (
         <div className="SearchBox">
-            <span>Resturant Locator Map</span>
+            <span>Chopify Map</span>
             <input placeholder=" search..." type="search" /> 
             <a href={"/ViewResturants"}>View All</a>
         </div>

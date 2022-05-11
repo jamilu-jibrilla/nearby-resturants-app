@@ -1,7 +1,7 @@
 input[type="search"] {
   width: 450px;
   height: 40px;
-  margin: 1.1em;
+  margin: 1.1em 7em 1.1em 0px;
   border: 1px solid rgba(0, 0, 0, 0.28);
   box-shadow: -4px 6px 35px -14px rgba(0, 0, 0, 0.1);
   background-color: transparent;
@@ -9,7 +9,6 @@ input[type="search"] {
   font-family: sans-serif;
   appearance: none;
   background-color: white;
-
   border-radius: 5px;
 }
 input[type="search"]:focus {
@@ -17,18 +16,22 @@ input[type="search"]:focus {
 }
 .SearchBox {
   background-color: #3f3d56;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 span {
-  margin: 0em 4em 0em 0.7em;
+  padding: 0em 3em 0em 2em;
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.78);
   color: white;
 }
+ 
 
 a {
+  padding: 0em 3em 0em 3em;
   text-decoration: none;
   color: white;
 }
