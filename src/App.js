@@ -8,7 +8,7 @@ import Home from "./Home";
 function App() {
   
   const [appData, setAppData] =  useState({
-    pictures:"dd",
+    pictures:"",
     data:"",
     lat:"",
     long:"",
@@ -57,7 +57,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/Map" element={<Map />} />
+        {/* <Route path="/Map" element={<Map />} /> */}
         <Route path="/ViewResturants"  element={<ViewResturants appData={appData}/>} />
       </Routes>
     </div>
