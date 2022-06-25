@@ -36,7 +36,7 @@ function App() {
     if(appData.lat && appData.long) {
       
       async function fetchData() {
-        let res = await fetch(`https://api.foursquare.com/v3/places/search?ll=${appData.lat}%2C${appData.long}&radius=100000&categories=13065&sort=POPULARITY&limit=20`,options)
+        let res = await fetch(`https://api.foursquare.com/v3/places/search?ll=${appData.lat}%2C${appData.long}&radius=100000&categories=13065&sort=POPULARITY&fields=timezone%2Ccategories%2Cfsq_id%2Cname%2Clocation%2Ctastes%2Cmenu%2Cprice%2Crating%2Chours%2Cdescription%2Cchains%2Cfeatures%2Csocial_media&limit=40&open_now=true`,options)
         let data= await res.json()
         Promise.all(data.results.map( place => {
            return fetch(`https://api.foursquare.com/v3/places/${place.fsq_id}/photos?limit=40&sort=NEWEST&classifications=food%2Coutdoor%2Cmenu%2Cindoor`,options)
