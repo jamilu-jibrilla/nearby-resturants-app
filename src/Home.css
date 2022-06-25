@@ -1,9 +1,8 @@
 button {
   background-color: #3f3d56;
 }
-.Home {
-  background: rgba(0, 0, 0, 0.02);
-}
+body {
+  background: rgba(255, 255, 255, 0.67);}
 .logo, a, h1, .Home span {
   color: #3f3d56;
 }
@@ -15,7 +14,7 @@ button {
 .Home  .line{
   height: 3px;
   width: 30px;
-  margin: 8px;
+  margin: 5px;
   background-color: black;
 }
 
