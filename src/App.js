@@ -10,12 +10,16 @@ function App() {
   const [appData, setAppData] =  useState({
     pictures:"",
     data:"",
-    lat:"",
-    long:"",
+    lat:null,
+    long:null,
   
   })
 
   useEffect(()=> {
+    // while(appData.lat===null && appData.long===null) {
+      // alert("please turn on your location")
+    // }
+
     navigator.geolocation.getCurrentPosition((position) => {
       setAppData({
         ...appData,
@@ -23,6 +27,7 @@ function App() {
         long: `${position.coords.longitude}`
       })
     });
+    
 
     
     const options = {
@@ -36,7 +41,7 @@ function App() {
     if(appData.lat && appData.long) {
       
       async function fetchData() {
-        let res = await fetch(`https://api.foursquare.com/v3/places/search?ll=${appData.lat}%2C${appData.long}&radius=100000&categories=13065&sort=POPULARITY&fields=timezone%2Ccategories%2Cfsq_id%2Cname%2Clocation%2Ctastes%2Cmenu%2Cprice%2Crating%2Chours%2Cdescription%2Cchains%2Cfeatures%2Csocial_media&min_price=1&max_price=4&limit=50`,options)
+        let res = await fetch(`https://api.foursquare.com/v3/places/search?ll=${appData.lat}%2C${appData.long}&radius=100000&categories=13065&fields=timezone%2Ccategories%2Cfsq_id%2Cname%2Clocation%2Ctastes%2Cmenu%2Cprice%2Crating%2Chours%2Cdescription%2Cchains%2Cfeatures%2Csocial_media&limit=50`,options)
         let data= await res.json()
         Promise.all(data.results.map( place => {
            return fetch(`https://api.foursquare.com/v3/places/${place.fsq_id}/photos?limit=40&sort=NEWEST&classifications=food%2Coutdoor%2Cmenu%2Cindoor`,options)
@@ -51,7 +56,7 @@ function App() {
     }
 
 
-  },[appData.lat,appData.long])
+  },[appData.lat && appData.long])
   
   return (
     <div className="App">

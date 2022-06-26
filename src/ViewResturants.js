@@ -12,39 +12,7 @@ const ViewResturants = ({appData}) => {
       </div>
       <div className="main flex justify-center flex-wrap">
         {appData.data ? (
-          appData.data.map((place, index) => (
-            // <div className="card mx-4  w-34 my-12 h-96">
-            //   <div className="card-image" >
-            //     <img width={"200px"} height={"150px"} src={appData.pictures[index].length === 0 ? "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/5/r/z/p53930-15529157675c8f9d37cfcb7.jpg?tr=tr:n-xlarge" : appData.pictures[index][0].prefix+"500x300"+appData.pictures[index][0].suffix}/> 
-            //   </div>
-            //   <div className="card-text" >
-            //     <h4 className="py-2 px-2 font-medium">{place.name}</h4>
-            //     <h6 className="py-1 px-2 text-sm">{place.location.formatted_address}</h6>     
-            //   </div>
-            // </div>
-
-            // <div class="max-w-sm card rounded overflow-hidden shadow-lg mx-6 mt-48">
-            //   <img class="w-full" src={appData.pictures[index].length === 0 ? "https://v1.tailwindcss.com/img/card-top.jpg" : appData.pictures[index][0].prefix+"500x300"+appData.pictures[index][0].suffix} alt="Sunset in the mountains" />
-            //   <div class="px-6 py-4">
-            //     <div class="font-bold text-lg  mb-1">{place.name}</div>
-            //     <div className="flex mb-1">
-            //       <img className="image" src="https://img.icons8.com/fluency/48/000000/star.png"/>
-            //       <img className="image" src="https://img.icons8.com/fluency/48/000000/star.png"/>
-            //       <img className="image" src="https://img.icons8.com/fluency/48/000000/star.png"/>
-            //       <img className="image" src="https://img.icons8.com/fluency/48/000000/star.png"/>
-            //       <img className="image" src="https://img.icons8.com/fluency/48/000000/star.png"/>
-            //     </div>
-            //     <p class="text-gray-700 text-base">
-            //     {place.location.formatted_address}
-            //     </p>
-            //   </div>
-            //   <div class="px-6 pt-4 pb-2">
-            //     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Food</span>
-            //     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-            //     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-            //   </div>
-            // </div>
-          // <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+          appData.data.map((place, index) => (          
             <div class="card mx-7 my-4  c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover" src={appData.pictures[index].length < 1 ? "https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" : appData.pictures[index][Math.floor(Math.random() * appData.pictures[index].length)].prefix+"500x300"+appData.pictures[index][Math.floor(Math.random() * appData.pictures[index].length)].suffix} alt=""/>
@@ -54,7 +22,7 @@ const ViewResturants = ({appData}) => {
                 <h2 class="mt-2 mb-2  font-bold">{place.name}</h2>
                 <p class="text-sm">{place.description ?  place.description : 'No description'}.</p>
                 <div class="mt-3 flex items-center">
-                  <span class="text-sm font-semibold"></span>&nbsp;<span class="font-bold text-xl"></span>&nbsp;<span class="text-sm font-semibold"></span>
+                  <span class="text-sm font-semibold"> {place.hours.display}</span>&nbsp;<span class="font-bold text-xl"></span>&nbsp;<span class="text-sm font-semibold"></span>
                 </div>
               </div>
               <div class="p-4 border-t border-b text-xs text-gray-700">

@@ -1,12 +1,13 @@
 input {
-    width: 550px;
-    height: 60px;
-    border-radius: 34px;
+    width: 400px;
+    height: 40px;
+    border-radius: 30px;
     outline: none;
-    color: white;
-    background-color: #857a7a;
-    padding: 1rem;
-    padding-left: 180px;
+    background-color: rgba(189, 189, 189, 0.616);
+    /*padding: 1rem;*/
+     padding-left: 130px;
+     font-size: .9rem;
+     
 }
 .heading {
     background: rgba(255, 255, 255, 1);
@@ -29,18 +30,20 @@ input {
     width: 15px;
 }
 
-input::placeholder {
-    color: white;
+input::placeholder{
+    color: rgb(128, 128, 128);
+  
 }
+
 @media screen and (max-width:650px) {
     input {
         width: 90vw;
-        padding:7.4%;
-        padding-left: 70px;
+        padding:5.4%;
+        padding-left: 85px;
         height: 30px;
         font-size: .9em;
     }
     .heading {
-        height: 110px;
+        height: 90px;
     }
 }
