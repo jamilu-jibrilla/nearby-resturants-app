@@ -46,4 +46,8 @@ input::placeholder{
     .heading {
         height: 90px;
     }
+    
+.main {
+    margin-top: 7rem;
+}
 }
