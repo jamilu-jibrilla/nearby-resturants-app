@@ -72,7 +72,7 @@ const ViewResturants = ({appData}) => {
             }}
           >
             Loading.... <br></br>
-            Ensure sure your location is on...
+            Ensure sure your location is on.
           </div>
         )}
       </div>
