@@ -67,12 +67,16 @@ const ViewResturants = ({appData}) => {
               textAlign: "center",
               fontSize: "20px",
               fontWeight: "bold",
-              marginTop: "2em",
+              marginTop: "4em",
               color: "#3f3d56",
             }}
           >
-            Loading.... <br></br>
-            Ensure sure your location is on.
+            <p> 
+                Loading 
+            <svg class=" animate-spin h-5 w-5 absolute inline-block ml-4 border s  ..." viewBox="0 0 24 24">
+            </svg> <br></br>
+                Ensure sure your location is on.
+            </p>
           </div>
         )}
       </div>
