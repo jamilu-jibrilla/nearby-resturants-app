@@ -16,13 +16,32 @@ function App() {
 
 
   useEffect(()=> {
-    navigator.geolocation.getCurrentPosition( (position) => {
+
+    const showPosition = (position) => {
       setAppData({
         ...appData,
         lat: `${position.coords.latitude}`,
         long: `${position.coords.longitude}`
       })
-    });
+    }
+
+    const showError = (error) => {
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          alert("You must grant location permission for app to work")
+          break;
+        case error.POSITION_UNAVAILABLE:
+          alert("Location information is unavailable.")
+          break;
+        case error.TIMEOUT:
+          alert("The request to get user location timed out.")
+          break;
+        case error.UNKNOWN_ERROR:
+          alert("An unknown error occurred.")
+          break;
+      }
+    }
+    navigator.geolocation.getCurrentPosition(showPosition, showError)
   },[])
 
 
