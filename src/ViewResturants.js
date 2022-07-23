@@ -3,7 +3,6 @@ import Card from "./Card";
 import Loader from "./Loader";
 
 const ViewResturants = ({appData, setAppData}) => {
-
   const filterByName = (e) => {
     setAppData({
       ...appData,
@@ -41,6 +40,9 @@ const ViewResturants = ({appData, setAppData}) => {
        return item 
     }
   })
+
+console.log(filteredData)
+
   return (
     <div className="ViewResturants">
      

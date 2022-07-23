@@ -3,6 +3,8 @@ import { Route, Routes,  } from "react-router-dom";
 import "./App.css";
 import ViewResturants from "./ViewResturants";
 import Home from "./Home";
+import Details from "./Details";
+
 
 function App() {
   
@@ -24,7 +26,7 @@ function App() {
         long: `${position.coords.longitude}`
       })
     }
-
+    
     const showError = (error) => {
       switch(error.code) {
         case error.PERMISSION_DENIED:
@@ -39,6 +41,8 @@ function App() {
         case error.UNKNOWN_ERROR:
           alert("An unknown error occurred.")
           break;
+        default:
+          alert("default value")
       }
     }
     navigator.geolocation.getCurrentPosition(showPosition, showError)
@@ -51,7 +55,7 @@ function App() {
           method: 'GET',
           headers: {
             Accept: 'application/json',
-            Authorization: 'fsq3O/V4qgl9Xwc7/J2XjC24IKwNOvbtI89PeWz/7LeD1+g='
+            Authorization: 'fsq3dzAnSin8WnxIudDhbb0m0oeTOBVhzxb6RkY06UipQVE='
           }
         };
         
@@ -70,15 +74,13 @@ function App() {
     fetchData()
 
   },[appData.long])
-
-
-
   
   return (
     <div className="App">
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/ViewResturants"  element={<ViewResturants appData={appData} setAppData={setAppData}/>} />
+        <Route path="/ViewResturants/:id" element={<Details appData={appData} />} />
       </Routes>
     </div>
   );

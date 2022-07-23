@@ -1,13 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import "@tomtom-international/web-sdk-maps/dist/maps.css";
 import tt from "@tomtom-international/web-sdk-maps";
-import axios from "axios";
-import SearchBox from "./SearchBox";
 
-const Map = ({ Mapdata, setMapData }) => {
+const Map = ({mapLatitude, mapLongtitude  }) => {
   const mapElement = useRef();
-  const [mapLatitude, setMapLatitude] = useState("");
-  const [mapLongtitude, setMapLongtitude] = useState("");
   const [map, setMap] = useState({});
   const [mapLoaded, setMapLoaded] = useState(false);
 
@@ -37,47 +33,17 @@ const Map = ({ Mapdata, setMapData }) => {
   };
 
   useEffect(() => {
-    if (mapLoaded) {
-      console.log(mapLatitude, mapLongtitude);
-      const options = {
-        method: "GET",
-        url: "https://api.foursquare.com/v3/places/search",
-        params: {
-          ll: `${mapLatitude},${mapLongtitude}`,
-          categories: "13065",
-          radius: 100000,
-          sort: "POPULARITY",
-          limit: "20",
-        },
-        headers: {
-          Accept: "application/json",
-          Authorization: "fsq3O/V4qgl9Xwc7/J2XjC24IKwNOvbtI89PeWz/7LeD1+g=",
-        },
-      };
-      axios
-        .request(options)
-        .then(function (res) {
-          console.log(mapLatitude, mapLongtitude);
-          let data = res.data.results;
-          data.map((place) => {
-            addMarker(
-              place.geocodes.main.longitude,
-              place.geocodes.main.latitude,
-              place.name
-            );
-          });
-        })
-        .catch(function (error) {
-          console.error(error);
-        });
+    if (mapLoaded) {;
+      addMarker(mapLongtitude, mapLatitude, "Destination")
+      const showPosition = (position) => {
+        addMarker(position.coords.longitude, position.coords.latitude, "My location")
+      }
+      navigator.geolocation.getCurrentPosition(showPosition)
     }
   }, [mapLoaded]);
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      setMapLatitude(`${position.coords.latitude}`);
-      setMapLongtitude(`${position.coords.longitude}`);
-    });
+    
     let map = tt.map({
       key: "qQMtZMYW4RAyf2frPAyIW1Az1jjBRAYC",
       container: mapElement.current,
@@ -90,22 +56,20 @@ const Map = ({ Mapdata, setMapData }) => {
     setMap(map);
     if (mapLatitude && mapLongtitude) {
       console.log(mapLatitude, mapLongtitude);
-      setMapLoaded(true);
+      setTimeout(()=> {
+        setMapLoaded(true);
+
+      },5)
     }
     return () => map.remove();
-  }, [mapLongtitude, mapLatitude]);
+  }, []);
 
   return (
-    <div>
-      <div className="top-header">
-        <SearchBox />
-      </div>
       <div
-        style={{ height: "85vh", width: "100vw" }}
+        style={{ height: "40vh", width: "100vw" }}
         ref={mapElement}
         className="Map"
       ></div>
-    </div>
   );
 };
 export default Map;
