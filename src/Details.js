@@ -48,7 +48,7 @@ useEffect(()=> {
                 <div>
                     <div className='mb-4 flex'>
                         <span> Accepts home delivery</span>
-                        <span>{res !== null ? res.features.services ? res.features.services.delivery ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/> : " <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/> " : "not specified"}</span>
+                        <span>{res !== null ? res.features.services ? res.features.services.delivery ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/> : <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/>  : "not specified"}</span>
                     </div>
 
                     <div className='mb-4 flex'>
