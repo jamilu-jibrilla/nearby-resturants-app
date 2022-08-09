@@ -42,23 +42,23 @@ useEffect(()=> {
     return (
     <div className='overflow-x-hidden'>
         {(mapLatitude && mapLongtitude && data ) ? <> <Map mapLatitude={mapLatitude} mapLongtitude={mapLongtitude} res={res}/> 
-        <div className='detail flex flex-col md:flex-row  w-[100%] mt-8  bg-slate-50'>
+        <div className='detail flex flex-col-reverse md:flex-row  w-[100%] mt-8  bg-slate-50'>
             <section className='w-[100%] md:w-[50%] px-4 card  my-4 ml-0 md:ml-[7rem] c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden'>
                 <h1 className='text-2xl mb-5 font-medium text-[#3f3d56]'>Features </h1>
                 <div>
                     <div className='mb-4 flex'>
                         <span> Accepts home delivery</span>
-                        <span>{res !== null ? res.features.services ? res.features.services.delivery ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : null : " <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/> " : "not specified"}</span>
+                        <span>{res !== null ? res.features.services ? res.features.services.delivery ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/> : " <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/> " : "not specified"}</span>
                     </div>
 
                     <div className='mb-4 flex'>
                         <span> Accepts credit card </span>
-                        <span>{res !== null ? (res.features.payment && res.features.payment.credit_cards) ? res.features.payment.credit_cards.accepts_credit_cards ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : "null"  :  <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/> : "not specified"}</span>
+                        <span>{res !== null ? (res.features.payment && res.features.payment.credit_cards) ? res.features.payment.credit_cards.accepts_credit_cards ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/>  :  <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/> : "not specified"}</span>
                     </div>
 
                     <div className='mb-4 flex'>
                         <span>Allows Reservations</span>
-                        <span>{res !== null ? (res.features.services && res.features.services.dine_in) ? res.features.services.dine_in.reservations ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : null : <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/>  : "not specified"}</span>
+                        <span>{res !== null ? (res.features.services && res.features.services.dine_in) ? res.features.services.dine_in.reservations ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/> : <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/>  : "not specified"}</span>
                     </div>
 
                 </div>
