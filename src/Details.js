@@ -42,36 +42,37 @@ useEffect(()=> {
     return (
     <div className='overflow-x-hidden'>
         {(mapLatitude && mapLongtitude && data ) ? <> <Map mapLatitude={mapLatitude} mapLongtitude={mapLongtitude} res={res}/> 
-        <div className='detail flex flex-col md:flex-row w-screen  mt-8 '>
-            <section className='w-[100%] md:w-1/3 px-4'>
-                <h1 className='text-2xl mb-5 font-medium'><u> Features </u></h1>
+        <div className='detail flex flex-col md:flex-row  w-[100%] mt-8  bg-slate-50'>
+            <section className='w-[100%] md:w-[50%] px-4 card  my-4 ml-0 md:ml-[7rem] c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden'>
+                <h1 className='text-2xl mb-5 font-medium text-[#3f3d56]'>Features </h1>
                 <div>
-                    <div className='mb-4'>
-                        <span> Accepts delivery:</span>
-                        <span>{res !== null ? JSON.stringify(res.features.services.delivery) : "not specified"}</span>
+                    <div className='mb-4 flex'>
+                        <span> Accepts home delivery</span>
+                        <span>{res !== null ? res.features.services ? res.features.services.delivery ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : "false" : " " : "not specified"}</span>
                     </div>
 
-                    <div className='mb-4'>
-                        <span> Accepts credit card :</span>
-                        <span>{res !== null ? JSON.stringify(res.features.payment.credit_cards.accepts_credit_cards) : "not specified"}</span>
+                    <div className='mb-4 flex'>
+                        <span> Accepts credit card </span>
+                        <span>{res !== null ? (res.features.payment && res.features.payment.credit_cards) ? res.features.payment.credit_cards.accepts_credit_cards ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : "false"  : "" : "not specified"}</span>
                     </div>
 
-                    <div className='mb-4'>
-                        <span>Allows Reservations:</span>
-                        <span>{res !== null ? JSON.stringify(res.features.services.dine_in.reservations) : "not specified"}</span>
+                    <div className='mb-4 flex'>
+                        <span>Allows Reservations</span>
+                        <span>{res !== null ? (res.features.services && res.features.services.dine_in) ? res.features.services.dine_in.reservations ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : "false" : "" : "not specified"}</span>
                     </div>
 
                 </div>
             </section>
-            <section className=' w-[100%] md:w-1/3'>
-                <h1 className='text-2xl font-medium mb-5'><u> Photos </u></h1>
-                <div className='pics flex flex-wrap p-3 md:p-0'>
+            <section className=' w-[100%] md:w-[50%] px-4 card md:mx-7 my-4  h-[15rem] bg-white shadow-md hover:shadow-xl rounded-lg overflow-x-hidden overflow-y-auto'>
+                <h1 className='text-2xl font-medium mb-5 text-[#3f3d56]'> Menu </h1>
+                <div className='pics flex flex-wrap p-3 md:p-0 order-1 md:order-none'>
                     
                     {photo.length > 0 ? photo.map(item => {
                     return <img className='mr-2 mb-2' src={item.prefix+"500x300"+item.suffix} alt='restaurant'  width="130px" height="150px"/>
                     })
                     :
                     <>
+                    <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>
                     <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>
                     <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>
                     <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>

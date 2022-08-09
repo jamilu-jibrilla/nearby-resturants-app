@@ -22,7 +22,7 @@ const Home = () => {
       <div className="flex flex-col-reverse md:flex-row md:h-4/5 p-7">
         <div className="md:pl-7 md:w-4/6 sm:w-6/6 mb-19 sm:flex flex-col items-start justify-center ">
           <h1 className="  font-bold  text-2xl md:text-5xl flex-col-reverse pt-6 md:pt-0 ">
-            Find all the resturants <br /> that are around you. <br  />
+            Find all the resturants <br /> that are around you.<br/>
             {/* The Path To Find The Epitome <br className="hidden md:flex" /> Of
             Great Taste */}
           </h1>

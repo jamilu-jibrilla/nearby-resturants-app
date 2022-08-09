@@ -111,18 +111,18 @@ const Map = ({mapLatitude, mapLongtitude, res }) => {
   }, []);
 
   const resultList = result.features ? (
-    <div className="" key={result.id}>
-      <div className="m-5">
-      <h4 className='text-3xl mb-2 font-bold'> About </h4>
-          <h4 className="">
-            Name: {res.name}
+    <div className=" flex flex-col md:flex-row md:text-justify w-[100%] md:pl-[7rem] text-justify my-0 bg-white   " key={result.id}>
+      <div className="m-5 ">
+          <h4 className='text-3xl  mb-5 font-bold text-[red]'> Description </h4>
+          <h4 className="mb-2">
+            Reataurant name: {res.name}
           </h4>
-          <h4>
-            Address : {res.location.address}
+          <h4 className="mb-2">
+            Address: {res.location.address}
           </h4>
-        <div className="">
-          <h4>
-            Distance in KM : {result.features[0].properties.summary.lengthInMeters / 1000}
+        <div >
+          <h4 className="mb-2">
+            Distance in KiloMeters : {result.features[0].properties.summary.lengthInMeters / 1000}
           </h4>
           <h4>
             Time Estimate for Journey is
@@ -132,12 +132,12 @@ const Map = ({mapLatitude, mapLongtitude, res }) => {
       </div>
     </div>
   ) : (
-    <h4>Add location to get route details</h4>
+    <h4>Details not found</h4>
   );
   return (
     <>
       <div
-        style={{ height: "40vh", width: "100vw" }}
+        style={{ height: "45vh", width: "100vw" }}
         ref={mapElement}
         className="Map"
       ></div>
