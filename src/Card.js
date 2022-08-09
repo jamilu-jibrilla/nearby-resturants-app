@@ -1,6 +1,6 @@
 const Card = ({place, images, index}) => {
     return (
-        <a href={`/ViewResturants/${place.fsq_id}`} className="card mx-7 my-4  c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+        <a href={`/${place.fsq_id}`} className="card mx-7 my-4  c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
               <div className="relative pb-48 overflow-hidden">
                   <img className="absolute inset-0 h-full w-full object-cover" src={images[index].length < 1 ? "https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" : images[index][Math.floor(Math.random() * images[index].length)].prefix+"500x300"+images[index][Math.floor(Math.random() * images[index].length)].suffix} alt="restaurants-pic"/>
               </div>

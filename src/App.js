@@ -80,7 +80,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/ViewResturants"  element={<ViewResturants appData={appData} setAppData={setAppData}/>} />
-        <Route path="/ViewResturants/:id" element={<Details appData={appData} />} />
+        <Route path="/:id" element={<Details appData={appData} />} />
       </Routes>
     </div>
   );
