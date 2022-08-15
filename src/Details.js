@@ -72,10 +72,11 @@ useEffect(()=> {
                     })
                     :
                     <>
-                    <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>
-                    <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>
-                    <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>
-                    <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>
+                    <img className='mr-2' src='https://fastly.4sqi.net/img/general/500x300/138653338_Jj4m86VFt-RoUJV6rpeGKYdKuPfIKEvn2mXC24XdSI4.jpg' alt='restaurant'  width="130px" height="150px"/>
+                    <img className='mr-2' src='https://fastly.4sqi.net/img/general/500x300/54815241_o-czJn8aFebd4bAfX-paOaQLnl3Fk17B2bNYFsN-x-M.jpg' alt='restaurant'  width="130px" height="150px"/>
+                    <img className='mr-2' src='https://fastly.4sqi.net/img/general/500x300/32732550_5i9ZDxwmUQq8LYWpJmf2ILs5P8WGezdF1b1vXLYe36M.jpg' alt='restaurant'  width="130px" height="150px"/>
+                    <img className='mr-2' src='https://fastly.4sqi.net/img/general/500x300/138653338_Jj4m86VFt-RoUJV6rpeGKYdKuPfIKEvn2mXC24XdSI4.jpg' alt='restaurant'  width="130px" height="150px"/>
+
                     </>}
                 </div>
             </section>
