@@ -42,10 +42,10 @@ useEffect(()=> {
     return (
     <div className='overflow-x-hidden'>
         {(mapLatitude && mapLongtitude && data ) ? <> <Map mapLatitude={mapLatitude} mapLongtitude={mapLongtitude} res={res}/> 
-        <div className='detail flex flex-col-reverse md:flex-row  w-[100%] mt-8  bg-slate-50'>
-            <section className='w-[100%] md:w-[50%] px-4 card  my-4 ml-0 md:ml-[7rem] c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden'>
-                <h1 className='text-2xl mb-5 font-medium text-[#3f3d56]'>Features </h1>
-                <div>
+        <div className='detail flex flex-col-reverse md:flex-row  w-[100%] mt-8  bg-slate-50 '>
+            <section className='w-[100%] md:w-[50%] px-4 card  my-4 ml-0 md:ml-[7rem] p-3 c-card relative block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden'>
+                <h1 className='text-2xl mb-5 font-medium text-[#3f3d56] absolute top-3 left-9'>Features </h1>
+                <div className='mt-12 flex flex-wrap ml-5'>
                     <div className='mb-4 flex'>
                         <span> Accepts home delivery</span>
                         <span>{res !== null ? res.features.services ? res.features.services.delivery ?  <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo'/>   : <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/> : <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo'/>  : "not specified"}</span>
@@ -63,16 +63,15 @@ useEffect(()=> {
 
                 </div>
             </section>
-            <section className=' w-[100%] md:w-[50%] px-4 card md:mx-7 my-4  h-[15rem] bg-white shadow-md hover:shadow-xl rounded-lg overflow-x-hidden overflow-y-auto'>
-                <h1 className='text-2xl font-medium mb-5 text-[#3f3d56]'> Menu </h1>
-                <div className='pics flex flex-wrap p-3 md:p-0 order-1 md:order-none'>
+            <section className=' w-[100%] md:w-[50%] px-4 card md:mx-7 my-4 p-3 relative h-[15rem] bg-white  rounded-lg overflow-x-hidden '>
+                <h1 className='text-2xl font-medium mb-5 text-[#3f3d56] absolute top-3 left-9'> Menu </h1>
+                <div className='pics flex flex-wrap ml:2 md:ml-5 p-2 md:p-0 order-1 md:order-none image-scroll mt-12 overflow-y-auto h-[150px]'>
                     
                     {photo.length > 0 ? photo.map(item => {
                     return <img className='mr-2 mb-2' src={item.prefix+"500x300"+item.suffix} alt='restaurant'  width="130px" height="150px"/>
                     })
                     :
                     <>
-                    <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>
                     <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>
                     <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>
                     <img className='mr-2' src='https://image.shutterstock.com/image-photo/group-happy-friends-having-breakfast-260nw-1201677928.jpg' alt='restaurant'  width="130px" height="150px"/>

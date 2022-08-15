@@ -5,7 +5,7 @@ const Loader = ({text, show}) => {
               textAlign: "center",
               fontSize: "20px",
               fontWeight: "bold",
-              marginTop: "4em",
+              marginTop: "8rem",
               color: "#3f3d56",
             }}
           >

@@ -30,7 +30,7 @@ function App() {
     const showError = (error) => {
       switch(error.code) {
         case error.PERMISSION_DENIED:
-          alert("You must grant location permission for app to work")
+          alert("please turn on device location")
           break;
         case error.POSITION_UNAVAILABLE:
           alert("Location information is unavailable.")

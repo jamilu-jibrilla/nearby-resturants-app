@@ -94,25 +94,23 @@ const Map = ({mapLatitude, mapLongtitude, res }) => {
         trafficIncidents: true,
         trafficFlow: true
       },
-      style: { map: "basic_main" },
+      style: { map: "basic_night" },
       color: "#0A5B6J",
       zoom: 13,
       title: "Basic map",
     });
     setMap(map);
     if (mapLatitude && mapLongtitude) {
-      console.log(mapLatitude, mapLongtitude);
       setTimeout(()=> {
         setMapLoaded(true);
-
       },5)
     }
     return () => map.remove();
   }, []);
 
   const resultList = result.features ? (
-    <div className=" flex flex-col md:flex-row md:text-justify w-[100%] md:pl-[7rem] text-justify my-0 bg-white   " key={result.id}>
-      <div className="m-5 ">
+    <div className="flex flex-col md:flex-row md:text-justify w-[100%] md:pl-[7rem] my-0" key={result.id}>
+      <div className="m-5">
           <h4 className='text-3xl  mb-5 font-bold text-[red]'> Description </h4>
           <h4 className="mb-2">
             Reataurant name: {res.name}
@@ -132,16 +130,21 @@ const Map = ({mapLatitude, mapLongtitude, res }) => {
       </div>
     </div>
   ) : (
-    <h4>Details not found</h4>
+    <>
+      <h4 className="ml-[2rem] mt-4 md:ml-[8rem] md:mt-10 text-3xl  mb-5 font-bold text-[red]" >Description</h4>
+      <h4 className="ml-[2rem] md:ml-[8rem] mt-2 md:mt-3" >No Description</h4>
+    </>
   );
   return (
     <>
       <div
         style={{ height: "45vh", width: "100vw" }}
         ref={mapElement}
-        className="Map"
+        className="Map "
       ></div>
-      {resultList}
+      <div>
+        {resultList}
+      </div>
     </>
   );
 };
