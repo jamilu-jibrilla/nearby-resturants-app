@@ -13,7 +13,7 @@ const Loader = ({text, show}) => {
                 Loading 
             <svg className=" animate-spin h-5 w-5 absolute inline-block ml-4 border s  ..." viewBox="0 0 24 24">
             </svg> <br></br>
-                Ensure sure your location is on.
+                Ensure your location is on.
             </p>
 
             <p className={`${show ? "": "none"}`}>search item doesn't exist</p>
