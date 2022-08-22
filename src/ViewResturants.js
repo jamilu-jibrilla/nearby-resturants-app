@@ -3,13 +3,6 @@ import Card from "./Card";
 import Loader from "./Loader";
 
 const ViewResturants = ({appData, setAppData}) => {
-  const filterByName = (e) => {
-    setAppData({
-      ...appData,
-      input:e.target.value
-    })
-  } 
-
   
   const toggleButton = () => {
     let length = document.documentElement.scrollTop
@@ -20,6 +13,7 @@ const ViewResturants = ({appData, setAppData}) => {
       scrollBtn.style.display = ""
     }
   }
+  window.addEventListener("scroll", toggleButton)
 
   
   const scrollToTop = () => {
@@ -29,11 +23,15 @@ const ViewResturants = ({appData, setAppData}) => {
     })
   }
 
-  window.addEventListener("scroll", toggleButton)
-
   
-  let images = []
+  const filterByName = (e) => {
+    setAppData({
+      ...appData,
+      input:e.target.value
+    })
+  } 
 
+  let images = []
   let filteredData =  appData.data.filter((item, index) => {
     if(item.name.toLowerCase().includes(appData.input.toLowerCase())) {
        images.push(appData.pictures[index])
@@ -41,7 +39,7 @@ const ViewResturants = ({appData, setAppData}) => {
     }
   })
 
-console.log(filteredData)
+
 
   return (
     <div className="ViewResturants">
@@ -68,17 +66,11 @@ console.log(filteredData)
       <button
         type="button"
         onClick={scrollToTop}
-        data-mdb-ripple="true"
-        data-mdb-ripple-color="light"
         className="scroll  p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out hidden bottom-8 right-7 fixed"
         id="btn-back-to-top"
       >
         <svg
-          aria-hidden="true"
-          focusable="false"
-          data-prefix="fas"
           className="w-4 h-4"
-          role="img"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
         >

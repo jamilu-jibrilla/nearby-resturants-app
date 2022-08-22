@@ -20,10 +20,11 @@ function App() {
   useEffect(()=> {
 
     const showPosition = (position) => {
-      setAppData({
-        ...appData,
-        lat: `${position.coords.latitude}`,
-        long: `${position.coords.longitude}`
+      setAppData((prev)=> {
+        return {...prev, 
+          lat: `${position.coords.latitude}`,
+          long: `${position.coords.longitude}`
+        }
       })
     }
     
@@ -65,11 +66,14 @@ function App() {
           const res = await fetch(`https://api.foursquare.com/v3/places/${place.fsq_id}/photos?limit=40&sort=NEWEST&classifications=food%2Coutdoor%2Cmenu%2Cindoor`, options);
           return await res.json();
         }))    
-        .then(images => setAppData({
-          ...appData,
-          data:data.results,
-          pictures: images  
-        }))
+        .then(images => setAppData(prevState => {
+          return {
+            ...prevState,
+            data:data.results,
+            pictures: images  
+          }
+        })
+        )
       }
     fetchData()
 
