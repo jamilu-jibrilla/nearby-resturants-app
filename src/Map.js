@@ -95,11 +95,11 @@ const Map = ({ mapLatitude, mapLongtitude, res }) => {
           Reataurant name: {res.name}
         </h4>
         <h4 className="mb-2">
-          Address: {res.location.address}
+          Address: {res.location.address ? res.location.address : 'no address found'}
         </h4>
         <div >
           <h4 className="mb-2">
-            Distance in KiloMeters : {result.features[0].properties.summary.lengthInMeters / 1000}
+            Distance in KiloMeters : {(result.features[0].properties.summary.lengthInMeters / 1000).toFixed(1)}
           </h4>
           <h4>
             Time Estimate for Journey is
