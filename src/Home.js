@@ -83,31 +83,31 @@ const Home = () => {
       <footer className="footer p-9 md:p-14  bg-gray-900 text-white md:h-[50vh] flex flex-col md:flex-row justify-between">
         <div className="w-[100%] md:w-2/6 mb-10">
           <h3 className="font-bold text-2xl mb-5">CHOPIFY</h3>
-          <h3 className=" dark:text-gray-400">
+          <h3 className=" text-gray-400">
             is an app that shows you lists of restaurant's around your area depending on your specific location and the details of the restaurants like, their name, brief description, what time they open or close.
           </h3>
         </div>
         <div className="flex justify-between w-[100%] md:w-[50%] flex-col md:flex-row">
           <div className="mr-28 mb-10">
             <h2 className="text-xl mb-4">Community</h2>
-            <h4 className="dark:text-gray-400 mb-4">Instagram</h4>
-            <h4 className="dark:text-gray-400 mb-4">Twitter</h4>
-            <h4 className="dark:text-gray-400 mb-4">Facebook</h4>
-            <h4 className="dark:text-gray-400 mb-4">LinkedIn</h4>
+            <h4 className="text-gray-400 mb-4">Instagram</h4>
+            <h4 className="text-gray-400 mb-4">Twitter</h4>
+            <h4 className="text-gray-400 mb-4">Facebook</h4>
+            <h4 className="text-gray-400 mb-4">LinkedIn</h4>
           </div>
           <div className="mr-28 mb-10">
           <h2 className="text-xl mb-4">About</h2>
-            <h4 className="dark:text-gray-400 mb-4">Team</h4>
-            <h4 className="dark:text-gray-400 mb-4">Copyright</h4>
-            <h4 className="dark:text-gray-400 mb-4">Privacy policy</h4>
-            <h4 className="dark:text-gray-400 mb-4">Terms & conditions</h4>
+            <h4 className="text-gray-400 mb-4">Team</h4>
+            <h4 className="text-gray-400 mb-4">Copyright</h4>
+            <h4 className="text-gray-400 mb-4">Privacy policy</h4>
+            <h4 className="text-gray-400 mb-4">Terms & conditions</h4>
           </div>
           <div className="mr-10">
           <h2 className="text-xl mb-4">Help</h2>
-            <h4 className="dark:text-gray-400 mb-4">Support</h4>
-            <h4 className="dark:text-gray-400 mb-4">Contact</h4>
-            <h4 className="dark:text-gray-400 mb-4">Account</h4>
-            <h4 className="dark:text-gray-400 mb-4">Trouble shooting</h4>
+            <h4 className="text-gray-400 mb-4">Support</h4>
+            <h4 className="text-gray-400 mb-4">Contact</h4>
+            <h4 className="text-gray-400 mb-4">Account</h4>
+            <h4 className="text-gray-400 mb-4">Trouble shooting</h4>
           </div>
         </div>
       </footer>
