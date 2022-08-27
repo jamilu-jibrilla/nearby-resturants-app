@@ -56,7 +56,7 @@ function App() {
           method: 'GET',
           headers: {
             Accept: 'application/json',
-            Authorization: 'fsq3nPoVvWw9BVXWteiiOla8yir/P8jNL0GujqlRgGMR8d8='
+            Authorization: 'fsq3gq8f3w+ZSaK/ihwuv1UI9+gJMEQJsq1jYVuM4AkiI04='
           }
         };
         
