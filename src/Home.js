@@ -80,7 +80,7 @@ const Home = () => {
         </div>
       </div>
 
-      <footer className="footer p-14 dark:bg-gray-900 text-white md:h-[50vh] flex flex-col md:flex-row justify-between">
+      <footer className="footer p-14 bg-gray-900 text-white md:h-[50vh] flex flex-col md:flex-row justify-between">
         <div className="w-[100%] md:w-2/6 mb-10">
           <h3 className="font-bold text-2xl mb-5">CHOPIFY</h3>
           <h3 className=" dark:text-gray-400">
