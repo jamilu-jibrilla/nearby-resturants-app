@@ -67,7 +67,9 @@ const Map = ({ mapLatitude, mapLongtitude, res }) => {
     });
     setMap(map);
     if (mapLatitude && mapLongtitude) {
-      setMapLoaded(true);
+      setTimeout(() => {
+        setMapLoaded(true);
+      }, 2000);
     }
     
     return () => map.remove();
