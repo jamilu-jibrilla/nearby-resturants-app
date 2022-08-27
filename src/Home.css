@@ -2,7 +2,7 @@ button {
   background-color: #3f3d56;
 }
 body {
-  background: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, .5);
 }
 .logo, a, h1, .Home span {
   color: #3f3d56;

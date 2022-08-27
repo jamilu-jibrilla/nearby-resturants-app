@@ -9,7 +9,7 @@ const Home = () => {
     <div className="Home">
 
       <div className="h-screen">
-        <nav className="p-7 flex justify-between items-center">
+        <nav className="px-7 py-5 flex justify-between items-center shadow-sm mb-7">
           <div className="logo cursor-pointer md:ml-7 font-bold text-3xl md:text-4xl ">
             Chopify
           </div>
@@ -32,7 +32,7 @@ const Home = () => {
             <span className=" pb-4 text-lg">Discover all local resturants in your area  <br className="hidden md:flex" /> depending on your specific location.</span>
 
             <a href={"/ViewResturants"}>
-              <button className="rounded py-1 px-3 md:py-2  md:text-xl  flex items-center text-white md:px-7">
+              <button className="rounded mt-1 py-1 px-3 md:py-2  md:text-xl  flex items-center text-white md:px-7">
                 Checkout{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ const Home = () => {
       </div>
 
       <div className="md:h-[80vh] flex flex-col items-center md:flex-row rounded-lg pt-10 md:pt-0 bg-[#E5E5E5]  mt-4  justify-around">
-        <div className="card w-[30%]  mb-5 h-[350px] flex flex-col items-center justify-center bg-white">
+        <div className="card w-[30%]  mb-5 h-[350px] rounded-lg flex flex-col items-center justify-center bg-white">
           <img src={ban} alt="icon" />
           <h2 className="font-bold mt-5">Free</h2>
         </div>
@@ -89,21 +89,21 @@ const Home = () => {
         </div>
         <div className="flex justify-between w-[100%] md:w-[50%] flex-col md:flex-row">
           <div className="mr-28 mb-10">
-            <h2 className="text-2xl mb-4">Community</h2>
+            <h2 className="text-xl mb-4">Community</h2>
             <h4 className="dark:text-gray-400 mb-4">Instagram</h4>
             <h4 className="dark:text-gray-400 mb-4">Twitter</h4>
             <h4 className="dark:text-gray-400 mb-4">Facebook</h4>
             <h4 className="dark:text-gray-400 mb-4">LinkedIn</h4>
           </div>
           <div className="mr-28 mb-10">
-          <h2 className="text-2xl mb-4">About</h2>
+          <h2 className="text-xl mb-4">About</h2>
             <h4 className="dark:text-gray-400 mb-4">Team</h4>
             <h4 className="dark:text-gray-400 mb-4">Copyright</h4>
             <h4 className="dark:text-gray-400 mb-4">Privacy policy</h4>
             <h4 className="dark:text-gray-400 mb-4">Terms & conditions</h4>
           </div>
           <div className="mr-10">
-          <h2 className="text-2xl mb-4">Help</h2>
+          <h2 className="text-xl mb-4">Help</h2>
             <h4 className="dark:text-gray-400 mb-4">Support</h4>
             <h4 className="dark:text-gray-400 mb-4">Contact</h4>
             <h4 className="dark:text-gray-400 mb-4">Account</h4>
