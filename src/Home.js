@@ -9,7 +9,7 @@ const Home = () => {
     <div className="Home">
 
       <div className="h-screen">
-        <nav className="px-7 py-5 flex justify-between items-center shadow-sm mb-7">
+        <nav className="px-7 py-5 flex justify-between items-center mb-7">
           <div className="logo cursor-pointer md:ml-7 font-bold text-3xl md:text-4xl ">
             Chopify
           </div>
