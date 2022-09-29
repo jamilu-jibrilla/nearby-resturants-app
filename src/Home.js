@@ -57,7 +57,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="md:h-[80vh] flex flex-col items-center md:flex-row rounded-lg pt-10 md:pt-0 bg-[#E5E5E5]  mt-4  justify-around">
+      <div className="hidden md:h-[80vh] flex flex-col items-center md:flex-row rounded-lg pt-10 md:pt-0 bg-[#E5E5E5]  mt-4  justify-around">
         <div className="card w-[30%]  mb-5 h-[350px] rounded-lg flex flex-col items-center justify-center bg-white">
           <img src={ban} alt="icon" />
           <h2 className="font-bold mt-5">Free</h2>
@@ -80,7 +80,7 @@ const Home = () => {
         </div>
       </div>
 
-      <footer className="footer p-9 md:p-14  bg-gray-900 text-white md:h-[50vh] flex flex-col md:flex-row justify-between">
+      <footer className="hidden footer p-9 md:p-14  bg-gray-900 text-white md:h-[50vh] flex flex-col md:flex-row justify-between">
         <div className="w-[100%] md:w-2/6 mb-10">
           <h3 className="font-bold text-2xl mb-5">CHOPIFY</h3>
           <h3 className=" text-gray-400">
