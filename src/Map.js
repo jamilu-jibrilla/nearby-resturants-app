@@ -14,7 +14,7 @@ const Map = ({ mapLatitude, mapLongtitude, res }) => {
   const addMarker = (l1, l2, markerText) => {
     let markerElement = document.createElement("div");
     markerElement.className = "marker";
-    markerElement.style.backgroundImage = `url("https://ascendfood.com/assets/images/marker.png")`;
+    markerElement.style.backgroundImage = `url("https://static.thenounproject.com/png/568419-200.png")`;
     markerElement.style.backgroundSize = "cover";
     markerElement.style.width = "28px";
     markerElement.style.height = "28px";
