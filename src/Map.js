@@ -14,7 +14,7 @@ const Map = ({ mapLatitude, mapLongtitude, res }) => {
   const addMarker = (l1, l2, markerText) => {
     let markerElement = document.createElement("div");
     markerElement.className = "marker";
-    markerElement.style.backgroundImage = `url("https://static.thenounproject.com/png/568419-200.png")`;
+    markerElement.style.backgroundImage = `url("https://thumbs.dreamstime.com/z/restaurant-map-pin-icon-element-warning-navigation-pin-icon-mobile-concept-web-apps-detailed-restaurant-map-pin-icon-118830803.jpg")`;
     markerElement.style.backgroundSize = "cover";
     markerElement.style.width = "28px";
     markerElement.style.height = "28px";
