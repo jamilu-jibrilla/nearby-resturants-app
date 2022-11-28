@@ -9,10 +9,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-nav a {
-  color: black !important;
-}
-nav a:hover {
-  border-bottom: 2px solid #3f3d56;
-}

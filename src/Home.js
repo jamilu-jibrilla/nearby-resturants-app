@@ -3,6 +3,7 @@ import location from "./location.svg";
 import ban from "./icons/ban.png"
 import business from "./icons/business.png"
 import rocket from "./icons/rocket.png"
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
             <a href="#">Help</a>
             <a href="#">Contact</a>
           </div>
-          <div className="md:hidden">
+          <div className="hidden">
             <div className="line"></div >
             <div className="line"></div >
             <div className="line"></div >
@@ -31,7 +32,7 @@ const Home = () => {
             </h1>
             <span className=" pb-4 text-lg">Discover all local resturants in your area  <br className="hidden md:flex" /> depending on your specific location.</span>
 
-            <a href={"/ViewResturants"}>
+            <Link to={"/ViewResturants"}>
               <button className="rounded mt-1 py-1 px-3 md:py-2  md:text-xl  flex items-center text-white md:px-7">
                 Checkout{" "}
                 <svg
@@ -49,7 +50,7 @@ const Home = () => {
                   />
                 </svg>
               </button>
-            </a>
+            </Link>
           </div>
           <div className=" md:w-3/6 md:mt-7 ">
             <img width="90%" className="" src={location} alt="" />

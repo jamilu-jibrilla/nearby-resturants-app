@@ -46,12 +46,17 @@ function App() {
           alert("default value")
       }
     }
-    navigator.geolocation.getCurrentPosition(showPosition, showError)
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, showError)
+    } else {
+      alert("Geolocation is not supported by this browser")
+    }
   },[])
 
 
   useEffect(()=> {
       async function fetchData() {
+        alert(appData.long)
         const options = {
           method: 'GET',
           headers: {
@@ -75,7 +80,8 @@ function App() {
         })
         )
       }
-    fetchData()
+
+      if(appData.long) fetchData()
 
   },[appData.long])
   
