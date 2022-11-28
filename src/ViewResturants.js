@@ -58,7 +58,7 @@ const ViewResturants = ({appData, setAppData}) => {
         {appData.data.length > 0 ? (
           filteredData.length > 0 ? (
           filteredData.map((place, index) => (
-           <Card place={place} images={images} index={index} />
+           <Card key={index} place={place} images={images} index={index} />
           )) ) : <Loader show={true}/>
         ) : <Loader/>
         }
