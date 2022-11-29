@@ -1,8 +1,17 @@
 import "./ViewResturants.css";
 import Card from "./Card";
 import Loader from "./Loader";
+import { useEffect } from "react";
 
 const ViewResturants = ({appData, setAppData}) => {
+
+  useEffect(()=>{
+    window.addEventListener("scroll", toggleButton)
+
+    return () => {
+      window.removeEventListener("scroll", toggleButton)
+    }
+  }, [])
   
   const toggleButton = () => {
     let length = document.documentElement.scrollTop
@@ -13,7 +22,6 @@ const ViewResturants = ({appData, setAppData}) => {
       scrollBtn.style.display = ""
     }
   }
-  window.addEventListener("scroll", toggleButton)
 
   
   const scrollToTop = () => {

@@ -44,9 +44,18 @@ function App() {
         default:
           alert("default value")
       }
+      alert(`A location error occured, App will use a default latitude of lat: 9.0570752 and lng: 7.471104 {location: FCT, Nigeria}. This error occurs only on mobile devices or when location is switched off. To get realtime data switch to a computer or turn on device location`)
+      setAppData(prev => {
+        return { 
+        ...prev, 
+          lat: 9.0570752,
+          long: 7.471104
+        }
+      })
+
     }
     if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition, showError, {enableHighAccuracy: true, maximumAge: 10000})
+      navigator.geolocation.getCurrentPosition(showPosition, showError)
     } else {
       alert("Geolocation is not supported by this browser")
     }
@@ -81,7 +90,7 @@ function App() {
 
       if(appData.long) fetchData()
 
-  },[appData.long, appData.lat])
+  },[appData.long])
   
   return (
     <div className="App">
