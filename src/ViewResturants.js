@@ -45,7 +45,6 @@ const ViewResturants = ({appData, setAppData}) => {
        images.push(appData.pictures[index])
        return item 
     }
-    return []
   })
 
 

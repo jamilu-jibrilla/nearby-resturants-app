@@ -50,37 +50,31 @@ export default function Details() {
                                 <div className='mb-4 flex'>
                                     <span> Accepts home delivery</span>
                                     <span>
-                                        {res !== null ?  
-                                        res.features.services ? 
-                                        res.features.services.delivery ? 
+                                        {
+                                        res?.features?.services?.delivery ? 
                                         <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo' /> :
-                                        <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo' /> :
-                                        <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo' /> :
-                                         "not specified"}
+                                        <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo' /> 
+                                         }
                                     </span>
                                 </div>
 
                                 <div className='mb-4 flex'>
                                     <span> Accepts credit card </span>
-                                    <span>{res !== null ?
-                                        (res.features.payment && res.features.payment.credit_cards) ? 
-                                        res.features.payment.credit_cards.accepts_credit_cards ? 
+                                    <span>{
+                                        res?.features?.payment?.credit_cards?.accepts_credit_cards ? 
                                         <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo' /> : 
-                                        <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo' /> : 
-                                        <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo' /> : 
-                                        "not specified"}
+                                        <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo' /> 
+                                        }
                                     </span>
                                 </div>
 
                                 <div className='mb-4 flex'>
                                     <span>Allows Reservations</span>
-                                    <span>{res !== null ? 
-                                        (res.features.services && res.features.services.dine_in) ? 
-                                        res.features.services.dine_in.reservations ? 
+                                    <span>{
+                                        res?.features?.services?.dine_in?.reservations ? 
                                         <img className='ml-2' width={20} height={20} src='https://cdn-icons-png.flaticon.com/512/845/845646.png' alt='logo' /> : 
-                                        <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo' /> : 
-                                        <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo' /> : 
-                                        "not specified"}
+                                        <img className='ml-2' width={20} height={20} src='https://as1.ftcdn.net/v2/jpg/00/66/50/16/1000_F_66501665_JfLTzP1VkkCjJeS7E7v0WLiOu4Kip5Oz.jpg' alt='logo' />  
+                                        }
                                     </span>
                                 </div>
 
@@ -90,7 +84,7 @@ export default function Details() {
                             <h1 className='text-2xl font-medium mb-5 text-[#3f3d56] absolute top-3 left-9'> Menu </h1>
                             <div className='pics flex flex-wrap ml:2 md:ml-5 p-2 md:p-0 order-1 md:order-none image-scroll mt-12 overflow-y-auto h-[150px]'>
 
-                                {photo.length > 0 ? photo.map(item => {
+                                {photo.length > 1 ? photo.map(item => {
                                     return <img className='mr-2 mb-2' src={item.prefix + "500x300" + item.suffix} alt='restaurant' width="130px" height="150px" />
                                 })
                                     :
