@@ -30,7 +30,7 @@ function App() {
     const showError = (error) => {
       switch(error.code) {
         case error.PERMISSION_DENIED:
-          alert("please turn on device location")
+          alert(`Device location is turned off, App will use default coordinates of lat: 9.0570752 and lng: 7.471104 {location: FCT, Nigeria}. To get realtime data turn on device location and refresh.`)
           break;
         case error.POSITION_UNAVAILABLE:
           alert("Location information is unavailable.")
@@ -44,7 +44,6 @@ function App() {
         default:
           alert("default value")
       }
-      alert(`A location error occured, App will use a default latitude of lat: 9.0570752 and lng: 7.471104 {location: FCT, Nigeria}. This error occurs only on mobile devices or when location is switched off. To get realtime data switch to a computer or turn on device location`)
       setAppData(prev => {
         return { 
         ...prev, 
